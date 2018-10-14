@@ -405,8 +405,7 @@ height:50vh;
     <article class="article-entry">
         <h1 id="护网杯ltshop引发的思考"><a href="#护网杯ltshop引发的思考" class="headerlink" title="护网杯ltshop引发的思考"></a>护网杯ltshop引发的思考</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>质量还是比较高的一个比赛，Web有点偏，不过对大家来说很公平，除了一些神仙队，如此题开局6小时无一人做出，一血后一个多小时就60多个队了，神仙神仙，打不过。本来有机会进线下的，奈何1000分的理论题忘了做了。。。。小伤</p>
 <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>一个商场，每个账号初始有<strong>20RMB</strong>，<strong>5RMB</strong>可以买<strong>1包</strong>大辣条，<strong>5包</strong>大辣条换<strong>1包</strong>辣条之王，<strong>9999999</strong>包辣条之王可以换Flag</p>
-<p>###做题思路</p>
-<p>全页面就一个输入点，选择你需要越换辣条之王的数量，发现我们的钱连一个辣条之王都买不了，联想到之前CTFtime上的某个比赛（忘了），第一步条件竞争，Burp200线程买大辣条，成功买到16包大辣条！！！，但是因为要9999999包辣条之王才能换flag</p>
+<h3 id="做题思路"><a href="#做题思路" class="headerlink" title="做题思路"></a>做题思路</h3><p>全页面就一个输入点，选择你需要越换辣条之王的数量，发现我们的钱连一个辣条之王都买不了，联想到之前CTFtime上的某个比赛（忘了），第一步条件竞争，Burp200线程买大辣条，成功买到16包大辣条！！！，但是因为要9999999包辣条之王才能换flag</p>
 <p>思路1:查看此题有没有换回去的方法，如果存在可以通过条件竞争一直来回换辣条和RMB，导致RMB或辣条越来越多从而买到Flag，遗憾的是并没有反向兑换</p>
 <p>思路2:查看是否可以通过注册账号功能或者其他功能，让每个账号的资产全部移植到同一个账号上去。Burp抓全部包，一一查看，发现逻辑全部在后台处理，除了cookie没有任何输入点，放弃</p>
 <p>思路3:可以通过php弱类型类似于0.999999=1的方法，发现小数点被过滤，放弃</p>
@@ -555,7 +554,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#护网杯ltshop引发的思考"><span class="toc-number">1.</span> <span class="toc-text">护网杯ltshop引发的思考</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.0.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述"><span class="toc-number">1.0.2.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后记"><span class="toc-number">1.0.3.</span> <span class="toc-text">后记</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#护网杯ltshop引发的思考"><span class="toc-number">1.</span> <span class="toc-text">护网杯ltshop引发的思考</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.0.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述"><span class="toc-number">1.0.2.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#做题思路"><span class="toc-number">1.0.3.</span> <span class="toc-text">做题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后记"><span class="toc-number">1.0.4.</span> <span class="toc-text">后记</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -617,13 +616,13 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="web"><span class="iconfont-archer">&#xe606;</span>web</span>
-    
-        <span class="sidebar-tag-name" data-tags="python"><span class="iconfont-archer">&#xe606;</span>python</span>
-    
         <span class="sidebar-tag-name" data-tags="Web"><span class="iconfont-archer">&#xe606;</span>Web</span>
     
         <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
+    
+        <span class="sidebar-tag-name" data-tags="web"><span class="iconfont-archer">&#xe606;</span>web</span>
+    
+        <span class="sidebar-tag-name" data-tags="python"><span class="iconfont-archer">&#xe606;</span>python</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -658,9 +657,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="web安全"><span class="iconfont-archer">&#xe60a;</span>web安全</span>
-    
         <span class="sidebar-category-name" data-categories="CTF"><span class="iconfont-archer">&#xe60a;</span>CTF</span>
+    
+        <span class="sidebar-category-name" data-categories="web安全"><span class="iconfont-archer">&#xe60a;</span>web安全</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
