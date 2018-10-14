@@ -346,27 +346,27 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2018/10/03/2018-10-03-Python-web安全(持续更新)-post/" >
+        <a class="abstract-title" href = "/2018/10/14/护网杯ltshop引发的思考/" >
             
-                <span>Python web安全(持续更新)</span>
+                <span>护网杯ltshop引发的思考</span>
         </a>
         <div class="abstract-content">
-            Python安全SSTI in jinja2注入发生的原因：​   由于不规范的代码习惯，参数格式化进字符串中在渲染模板，导致数据与逻辑混淆产生代码注入
-解决办法​   将数据和模板文件一同渲染
-示例12345678910111213#app.pyfrom flask import Flask,render_template,request,render_template_stringapp = Flask(__name__)@app.route('/&lt;name&gt;')def security(name):    page = '''&lt;h1&gt;This is Test...
+            护网杯ltshop引发的思考前言质量还是比较高的一个比赛，Web有点偏，不过对大家来说很公平，除了一些神仙队，如此题开局6小时无一人做出，一血后一个多小时就60多个队了，神仙神仙，打不过。本来有机会进线下的，奈何1000分的理论题忘了做了。。。。小伤
+题目描述一个商场，每个账号初始有20RMB，5RMB可以买1包大辣条，5包大辣条换1包辣条之王，9999999包辣条之王可以换Flag
+做题思路全页面就一个输入点，选择你需要越换辣条之王的数量，发现我们的钱连一个辣条之王都买不了，联想到之前CTFtime上的某个比赛（忘了），第一步条件竞争，Burp200线程买大辣条，成功买到16包大辣条！...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/03</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/14</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "web">web</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Web">Web</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "python">python</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "CTF">CTF</a>
     
 </div>
             
@@ -510,13 +510,13 @@
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="Web"><span class="iconfont-archer">&#xe606;</span>Web</span>
-    
-        <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
-    
         <span class="sidebar-tag-name" data-tags="web"><span class="iconfont-archer">&#xe606;</span>web</span>
     
         <span class="sidebar-tag-name" data-tags="python"><span class="iconfont-archer">&#xe606;</span>python</span>
+    
+        <span class="sidebar-tag-name" data-tags="Web"><span class="iconfont-archer">&#xe606;</span>Web</span>
+    
+        <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -551,9 +551,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="CTF"><span class="iconfont-archer">&#xe60a;</span>CTF</span>
-    
         <span class="sidebar-category-name" data-categories="web安全"><span class="iconfont-archer">&#xe60a;</span>web安全</span>
+    
+        <span class="sidebar-category-name" data-categories="CTF"><span class="iconfont-archer">&#xe60a;</span>CTF</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
@@ -575,24 +575,6 @@ jsonContent:
             console.warn('jquery load from jsdelivr failed, will load local script')
             document.write('<script src="/lib/jquery.min.js">\x3C/script>')
         }
-    </script>
-    <script src="/scripts/main.js"></script>
-    <!-- algolia -->
-    
-    <!-- busuanzi  -->
-    
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    
-    <!-- CNZZ  -->
-    
-    </div>
-    <!-- async load share.js -->
-     
-    </body>
-</html>
-
-
-      }
     </script>
     <script src="/scripts/main.js"></script>
     <!-- algolia -->
