@@ -373,6 +373,39 @@
         </div>
     </article>
     
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2018/10/03/2018-10-03-Python-web安全(持续更新)-post/" >
+            
+                <span>Python web安全(持续更新)</span>
+        </a>
+        <div class="abstract-content">
+            Python安全SSTI in jinja2注入发生的原因：​   由于不规范的代码习惯，参数格式化进字符串中在渲染模板，导致数据与逻辑混淆产生代码注入
+解决办法​   将数据和模板文件一同渲染
+示例12345678910111213#app.pyfrom flask import Flask,render_template,request,render_template_stringapp = Flask(__name__)@app.route('/&lt;name&gt;')def security(name):    page = '''&lt;h1&gt;This is Test...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/03</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Web">Web</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "python">python</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
     <!-- paginator  -->
     
 </main>
@@ -510,11 +543,9 @@
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="web"><span class="iconfont-archer">&#xe606;</span>web</span>
+        <span class="sidebar-tag-name" data-tags="Web"><span class="iconfont-archer">&#xe606;</span>Web</span>
     
         <span class="sidebar-tag-name" data-tags="python"><span class="iconfont-archer">&#xe606;</span>python</span>
-    
-        <span class="sidebar-tag-name" data-tags="Web"><span class="iconfont-archer">&#xe606;</span>Web</span>
     
         <span class="sidebar-tag-name" data-tags="CTF"><span class="iconfont-archer">&#xe606;</span>CTF</span>
     
