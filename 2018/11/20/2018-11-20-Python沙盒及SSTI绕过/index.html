@@ -22,7 +22,7 @@
     <meta name="description" content="CTF WEB狗">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>evoA&#39;s Blog</title>
+    <title>Python沙盒及SSTI 绕过 · evoA&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >evoA&#39;s Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name"></a>
+                <a href="#" class="post-name">Python沙盒及SSTI 绕过</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            [Untitled Post]
+            Python沙盒及SSTI 绕过
             <!-- 404 -->
             
         </h1>
@@ -263,6 +263,14 @@ height:50vh;
         
             <div class="post-intros">
                 <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Web">Web</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "CTF">CTF</a>
+    
+</div>
                 
                 
                     <div class="post-intro-read">
@@ -395,7 +403,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Python-沙盒及SSTI-绕过"><a href="#Python-沙盒及SSTI-绕过" class="headerlink" title="Python  沙盒及SSTI 绕过"></a>Python  沙盒及SSTI 绕过</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近比赛打的太菜了，没什么好写的，而且先知和安全客的师傅写的太全了</p>
+        <h1 id="护网杯ltshop引发的思考"><a href="#护网杯ltshop引发的思考" class="headerlink" title="护网杯ltshop引发的思考"></a>护网杯ltshop引发的思考</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近比赛打的太菜了，没什么好写的，而且先知和安全客的师傅写的太全了</p>
 <p>贴一下前几天例会分享的沙盒及SSTI绕过</p>
 <p>也是很基础的内容，DL 轻喷 orz</p>
 <h2 id="SSTI形式"><a href="#SSTI形式" class="headerlink" title="SSTI形式"></a>SSTI形式</h2><p>贴出我自己SSTI中常用的py2 EXP,下面就用这个做比喻，可能还有更精简的exp，知道的师傅勿喷，求评论告知</p>
@@ -593,7 +601,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python-沙盒及SSTI-绕过"><span class="toc-number">1.</span> <span class="toc-text">Python  沙盒及SSTI 绕过</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSTI形式"><span class="toc-number">1.2.</span> <span class="toc-text">SSTI形式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#姿势1"><span class="toc-number">1.2.1.</span> <span class="toc-text">姿势1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#姿势2"><span class="toc-number">1.2.2.</span> <span class="toc-text">姿势2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#姿势3"><span class="toc-number">1.2.3.</span> <span class="toc-text">姿势3</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法1："><span class="toc-number">1.2.3.1.</span> <span class="toc-text">方法1：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法2："><span class="toc-number">1.2.3.2.</span> <span class="toc-text">方法2：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#姿势4"><span class="toc-number">1.2.4.</span> <span class="toc-text">姿势4:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#姿势5："><span class="toc-number">1.2.5.</span> <span class="toc-text">姿势5：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#杂"><span class="toc-number">1.2.6.</span> <span class="toc-text">杂</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#execfile"><span class="toc-number">1.2.6.1.</span> <span class="toc-text">execfile()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#reload"><span class="toc-number">1.2.6.2.</span> <span class="toc-text">reload()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dir"><span class="toc-number">1.2.6.3.</span> <span class="toc-text">dir()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#list"><span class="toc-number">1.2.6.4.</span> <span class="toc-text">list()</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#护网杯ltshop引发的思考"><span class="toc-number">1.</span> <span class="toc-text">护网杯ltshop引发的思考</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSTI形式"><span class="toc-number">1.2.</span> <span class="toc-text">SSTI形式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#姿势1"><span class="toc-number">1.2.1.</span> <span class="toc-text">姿势1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#姿势2"><span class="toc-number">1.2.2.</span> <span class="toc-text">姿势2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#姿势3"><span class="toc-number">1.2.3.</span> <span class="toc-text">姿势3</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法1："><span class="toc-number">1.2.3.1.</span> <span class="toc-text">方法1：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法2："><span class="toc-number">1.2.3.2.</span> <span class="toc-text">方法2：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#姿势4"><span class="toc-number">1.2.4.</span> <span class="toc-text">姿势4:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#姿势5："><span class="toc-number">1.2.5.</span> <span class="toc-text">姿势5：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#杂"><span class="toc-number">1.2.6.</span> <span class="toc-text">杂</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#execfile"><span class="toc-number">1.2.6.1.</span> <span class="toc-text">execfile()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#reload"><span class="toc-number">1.2.6.2.</span> <span class="toc-text">reload()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dir"><span class="toc-number">1.2.6.3.</span> <span class="toc-text">dir()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#list"><span class="toc-number">1.2.6.4.</span> <span class="toc-text">list()</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -651,7 +659,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2018/11/20/2018-11-20-Python沙盒及SSTI绕过/" >[Untitled Post]</a>
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2018/11/20/2018-11-20-Python沙盒及SSTI绕过/" >Python沙盒及SSTI 绕过</a>
         </li>
     
     
